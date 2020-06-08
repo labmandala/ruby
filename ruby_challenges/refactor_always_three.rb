@@ -7,15 +7,16 @@ puts "Give me a number:"
 
 # 2. grab number from user with gets,
 # transform user's number to integer with .to_i
-# 3. set resulting number to a variable called 'number'
-# 4. perform math on number
+# 3. set resulting number to a variable
 first_number = gets.to_i
-number = first_number
-first_number += 5
-first_number *= 2
-first_number -= 4
-first_number /= 2
-first_number -= number
+# 4. set final number to variable for all calculations to maintain original number's value
+final_number = first_number
+# 5. perform math on number
+final_number += 5
+final_number *= 2
+final_number -= 4
+final_number /= 2
+final_number -= first_number
 
 # 5. give user the final number
-puts "Final number is Always #{first_number}"
+puts "Final number is Always #{final_number}"
