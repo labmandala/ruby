@@ -21,8 +21,10 @@ all_tweets = [
 ]
 
 total_number_of_tweets = all_tweets.size
-i = 0
-while (i <= total_number_of_tweets)
-	puts all_tweets[i]
-	i += 1
+tweets_displayed = 0
+
+while (tweets_displayed <= total_number_of_tweets)
+	puts all_tweets[tweets_displayed]
+	tweets_displayed += 1
+	puts tweets_displayed
 end
