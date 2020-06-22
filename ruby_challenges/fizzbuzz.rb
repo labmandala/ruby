@@ -4,5 +4,11 @@
 # for numbers which are multiples of both 3 & 5, print "FizzBuzz"
 
 1.upto(100) do |i|
-
+    if i % 3 == 0
+        puts "Fizz"
+    elsif i % 5 == 0
+        puts "Buzz"
+    elsif i % 3 == 0 && i % 5  == 0
+        puts "FizzBuzz"
+    end
 end
