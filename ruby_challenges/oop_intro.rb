@@ -28,6 +28,6 @@ class Ferret
 end 
 
 my_ferret = Ferret.new
-my_ferret.set_name= “Fredo”
+my_ferret.set_name= "Fredo"
 ferret_name = my_ferret.get_name
-puts “#{ferretname} says #{my_ferret.squeal}.”
+puts "#{ferret_name} says #{my_ferret.squeal}."
