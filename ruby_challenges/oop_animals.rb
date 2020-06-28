@@ -1,8 +1,9 @@
 # find errors in code, debug and improve
 
-class ferret
- 
-	def set_name = (ferret_name)
+# capitalize object title
+class Ferret
+    # remove blank spaces
+	def set_name=(ferret_name)
 		@name = ferret_name
 	end
  
@@ -28,6 +29,10 @@ class Chincilla
  
 	def set_name=(chinchilla_name)
 		@name = chinchilla_name
+    end
+    # add in missing method to get name
+    def get_name
+		return @name
 	end
  
 	def set_owner=(owner_name)
@@ -47,7 +52,7 @@ end
 class Parrot
  
 	def set_name=(parrot_name)
-		@name = name
+		@name = parrot_name
 	end
  
 	def get_name
@@ -61,24 +66,29 @@ class Parrot
 	def get_owner
 		return @owner_name
 	end
- 
+    # add missing tweet method
+    def tweet
+        return "chirp"
+    end
 end
  
+# add underscores to variables as naming convention and to match arguments
+
 my_ferret = Ferret.new
 my_ferret.set_name= "Fredo"
-ferretname = my_ferret.get_name
+ferret_name = my_ferret.get_name
  
 my_parrot = Parrot.new
 my_parrot.set_name= "Budgie"
-parrotname = my_parrot.get_name
+parrot_name = my_parrot.get_name
  
 my_chincilla = Chincilla.new
 my_chincilla.set_name= "Dali"
-chincillaname = my_chincilla.get_name
+chincilla_name = my_chincilla.get_name
  
-puts "#{ferretname} says #{my_ferret.squeal}, 
-#{parrotname} says #{my_parrot.tweet}, 
-and #{chincillaname} says #{my_chincilla.squeek}."
+puts "#{ferret_name} says #{my_ferret.squeal}, 
+#{parrot_name} says #{my_parrot.tweet}, 
+and #{chincilla_name} says #{my_chincilla.squeek}."
  
 puts my_ferret.inspect
 puts my_parrot.inspect
