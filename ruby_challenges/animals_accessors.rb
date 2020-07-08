@@ -1,31 +1,9 @@
 # Refactor previous refactored script to use attribute accessors
 
 class Pet
+	attr_writer :name, :species, :owner_name
+	attr_reader :name, :species, :owner_name
 
-    def set_species=(species)
-		@species = species
-	end
-	
-	def get_species
-		return @species
-	end
-	
-	def set_name=(pet_name) 
-		@name = pet_name
-	end
- 
-	def get_name
-		return @name
-	end
- 
-	def set_owner=(owner_name)
-		@owner_name = owner_name
-	end
- 
-	def get_owner
-		return @owner_name
-    end
-    # add if statement to produce a noise depending on it's species
     def pet_says
     
         if @species == "Ferret"
@@ -41,22 +19,20 @@ class Pet
          
 end
 
-# change class names below to new Pet class
-
 my_ferret = Pet.new 
-my_ferret.set_species = "Ferret"
-my_ferret.set_name = "Fredo"
-ferret_name = my_ferret.get_name
+my_ferret.species = "Ferret"
+my_ferret.name = "Fredo"
+ferret_name = my_ferret.name
 
 my_parrot = Pet.new
-my_parrot.set_species = "Parrot" 
-my_parrot.set_name= "Budgie"
-parrot_name = my_parrot.get_name
+my_parrot.species = "Parrot" 
+my_parrot.name= "Budgie"
+parrot_name = my_parrot.name
 
 my_chincilla = Pet.new 
-my_chincilla.set_species = "Chincilla" 
-my_chincilla.set_name= "Dali"
-chincilla_name = my_chincilla.get_name
+my_chincilla.species = "Chincilla" 
+my_chincilla.name= "Dali"
+chincilla_name = my_chincilla.name
 
 # change to use new pet_says method to return what each pet is going to say 
 puts "#{ferret_name} says #{my_ferret.pet_says}, 
