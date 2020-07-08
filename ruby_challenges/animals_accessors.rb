@@ -1,8 +1,7 @@
 # Refactor previous refactored script to use attribute accessors
 
 class Pet
-	attr_writer :name, :species, :owner_name
-	attr_reader :name, :species, :owner_name
+	attr_accessor :name, :species, :owner_name
 
     def pet_says
     
