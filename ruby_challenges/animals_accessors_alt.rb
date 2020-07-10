@@ -4,7 +4,7 @@ class Pet
     # instead of attr_writer as setters
     # instead of attr_reader as getters, just use attr_accessor for both
     # then add symbols (take up one bit of memory)
-    attr_accessor :name, :species, :owner_name
+    attr_accessor :name, :owner_name
     
 end
 
