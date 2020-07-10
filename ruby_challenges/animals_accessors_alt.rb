@@ -3,8 +3,9 @@
 class Pet
     # instead of attr_writer as setters
     # instead of attr_reader as getters, just use attr_accessor for both
-    # then add symbols
-	attr_accessor :name, :species, :owner_name
+    # then add symbols (take up one bit of memory)
+    attr_accessor :name, :species, :owner_name
+    
 end
 
 class Ferret < Pet
@@ -20,6 +21,7 @@ class Chincilla < Pet
     def squeak
         return "eeeep"
     end
+
 end
 
 class Parrot < Pet
@@ -27,6 +29,7 @@ class Parrot < Pet
     def tweet
         return "chirp"
     end
+
 end
 
 my_ferret = Ferret.new 
