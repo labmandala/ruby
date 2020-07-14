@@ -3,4 +3,6 @@ require 'open-uri'
 
 doc = Nokogiri::HTML(open('http://www.skillcrush.com'))
 
-puts doc.css(".entry-title").inner_html
+# print out list of all Nokogiri methods & Ruby methods
+# that can be called on the doc object
+puts doc.methods
