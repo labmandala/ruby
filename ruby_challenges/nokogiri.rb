@@ -3,5 +3,4 @@ require 'open-uri'
 
 doc = Nokogiri::HTML(open('http://www.skillcrush.com'))
 
-puts doc.search("h1")
-
+puts doc.css(".entry-title").inner_html
