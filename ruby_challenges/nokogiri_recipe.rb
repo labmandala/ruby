@@ -16,5 +16,3 @@ list = doc.css('.components-data')
 list.each do |n|
     puts n.inner_html
 end
-
-# nokogiri_recipe.rb:7: warning: calling URI.open via Kernel#open is deprecated, call URI.open directly or use URI#open
