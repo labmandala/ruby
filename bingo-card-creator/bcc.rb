@@ -1,4 +1,4 @@
-# Bingo Card project in Ruby
+# Bingo Card Creator project in Ruby
 
 # Build Bingo Card
 bingo_card = <<-BINGO
