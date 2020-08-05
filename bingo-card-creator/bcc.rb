@@ -1,6 +1,7 @@
 # Bingo Card Creator project in Ruby
 
-# Build Bingo Card
+require "prawn"
+
 bingo_card = <<-BINGO
 +---+---+---+---+---+
 | B | I | N | G | O |
@@ -63,3 +64,6 @@ puts n_col.inspect
 puts g_col.inspect
 puts o_col.inspect
 
+Prawn::Document.generate("bingo.pdf") do
+  text bingo_card
+end
