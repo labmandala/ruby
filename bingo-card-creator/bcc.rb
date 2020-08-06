@@ -65,5 +65,6 @@ puts g_col.inspect
 puts o_col.inspect
 
 Prawn::Document.generate("bingo.pdf") do
-  text bingo_card
+  define_grid(columns: 5, rows: 6)
+  grid.show_all
 end
