@@ -73,5 +73,6 @@ Prawn::Document.generate("bingo.pdf") do
  
   grid(0, 0).bounding_box do
     stroke_bounds
+    text "B", align: :center, valign: :center, size: 50, style: :bold
   end
 end
