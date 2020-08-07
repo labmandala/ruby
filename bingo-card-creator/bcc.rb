@@ -39,10 +39,6 @@ i_col = (16..30).to_a.sample(5)
 n_col = (31..45).to_a.sample(4)
 g_col = (46..60).to_a.sample(5)
 o_col = (61..75).to_a.sample(5)
-
-# to access first box, instructions inside of do...end
-#grid(0, 0).bounding_box do
-#end
  
 bingo_card = <<-BINGO
 +-----+-----+-----+-----+-----+
@@ -68,11 +64,32 @@ puts n_col.inspect
 puts g_col.inspect
 puts o_col.inspect
 
+# to access first box, instructions inside of do...end
+#grid(0, 0).bounding_box do
+#end
+
+# add borders, style text, insert full header
 Prawn::Document.generate("bingo.pdf") do
   define_grid(columns: 5, rows: 6)
  
   grid(0, 0).bounding_box do
     stroke_bounds
     text "B", align: :center, valign: :center, size: 50, style: :bold
+  end
+  grid(0, 1).bounding_box do
+    stroke_bounds
+    text "I", align: :center, valign: :center, size: 50, style: :bold
+  end
+  grid(0, 2).bounding_box do
+    stroke_bounds
+    text "N", align: :center, valign: :center, size: 50, style: :bold
+  end
+  grid(0, 3).bounding_box do
+    stroke_bounds
+    text "G", align: :center, valign: :center, size: 50, style: :bold
+  end
+  grid(0, 4).bounding_box do
+    stroke_bounds
+    text "O", align: :center, valign: :center, size: 50, style: :bold
   end
 end
