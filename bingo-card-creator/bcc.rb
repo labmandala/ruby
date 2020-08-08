@@ -68,15 +68,24 @@ puts o_col.inspect
 #grid(0, 0).bounding_box do
 #end
 
+#Using the same principle as with the header, 
+#we can iterate over our numbers starting with the first column:
 header = ["B", "I", "N", "G", "O"]
-
+ 
 Prawn::Document.generate("bingo.pdf") do
   define_grid(columns: 5, rows: 6)
  
-  header.each_with_index do |char, i|
+  header.each_with_index do |h, i|
     grid(0, i).bounding_box do
       stroke_bounds
-      text char, align: :center, valign: :center, size: 50, style: :bold
+      text h, align: :center, valign: :center, size: 50, style: :bold
+    end
+  end
+ 
+  b_col.each_with_index do |num, i|
+    grid((i + 1), 0).bounding_box do
+      stroke_bounds
+      text num.to_s, align: :center, valign: :center, size: 50
     end
   end
 end
