@@ -88,4 +88,25 @@ Prawn::Document.generate("bingo.pdf") do
       text num.to_s, align: :center, valign: :center, size: 50
     end
   end
+ 
+  i_col.each_with_index do |num, i|
+    grid((i + 1), 1).bounding_box do
+      stroke_bounds
+      text num.to_s, align: :center, valign: :center, size: 50
+    end
+  end
+ 
+  g_col.each_with_index do |num, i|
+    grid((i + 1), 3).bounding_box do
+      stroke_bounds
+      text num.to_s, align: :center, valign: :center, size: 50
+    end
+  end
+ 
+  o_col.each_with_index do |num, i|
+    grid((i + 1), 4).bounding_box do
+      stroke_bounds
+      text num.to_s, align: :center, valign: :center, size: 50
+    end
+  end
 end
