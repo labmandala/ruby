@@ -71,6 +71,7 @@ puts o_col.inspect
 #Using the same principle as with the header, 
 #we can iterate over our numbers starting with the first column:
 header = ["B", "I", "N", "G", "O"]
+n_col.insert(2, "F")
  
 Prawn::Document.generate("bingo.pdf") do
   define_grid(columns: 5, rows: 6)
@@ -91,6 +92,13 @@ Prawn::Document.generate("bingo.pdf") do
  
   i_col.each_with_index do |num, i|
     grid((i + 1), 1).bounding_box do
+      stroke_bounds
+      text num.to_s, align: :center, valign: :center, size: 50
+    end
+  end
+ 
+  n_col.each_with_index do |num, i|
+    grid((i + 1), 2).bounding_box do
       stroke_bounds
       text num.to_s, align: :center, valign: :center, size: 50
     end
