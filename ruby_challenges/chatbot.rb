@@ -4,6 +4,7 @@
 # select unique nickname & channel for a solitary room
 
 # make a connection to the IRC server using the TCPSocket class
+# TCPSocket represents a TCP/IP client socket.
 require 'socket'
  
 # declare variables to hold data for server, port, open connection 
@@ -21,3 +22,22 @@ socket.puts "USER #{nickname} 0 * #{nickname}"
 while message = socket.gets do
   puts message
 end
+
+# ping pong with server
+while message = socket.gets do
+ 
+  puts message
+  
+  
+  
+  if message.match('^PING :')
+  
+    server = message.split(':').last
+  
+    puts "PONG #{server}"
+  
+    socket.puts "PONG #{server}"
+  
+  end
+  
+ end
