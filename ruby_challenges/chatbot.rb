@@ -18,6 +18,9 @@ nickname = 'MandalaM00n'
 socket.puts "NICK #{nickname}"
 socket.puts "USER #{nickname} 0 * #{nickname}"
  
+# to send message, add this before your while loop
+socket.puts "PRIVMSG #{channel} :I am so happy to be here!"
+
 # read from connection, print to screen
 while message = socket.gets do
   puts message
@@ -27,8 +30,6 @@ end
 while message = socket.gets do
  
   puts message
-  
-  
   
   if message.match('^PING :')
   
