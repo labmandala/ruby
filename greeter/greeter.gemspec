@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
     s.name        = 'greeter'
     
     # gem version
-    s.version     = '0.0.0'
+    s.version     = '0.0.1'
     
     # short, one-line description of what gem does
     s.summary     = 'It greets you!'
@@ -27,5 +27,9 @@ Gem::Specification.new do |s|
     # we like free and open source software, & need to tell users this gem is open source
     # MIT is a good Open Source license
     s.license     = 'MIT'
+
+    # append two lines for executable
+    s.bindir      = 'exe'  
+    s.executables << 'greeter'
     
 end
